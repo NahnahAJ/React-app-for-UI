@@ -65,13 +65,13 @@ To setup and install this project, follow the below steps:
 - Clone this project by the command: 
 
 ```
-$ git clone https://github.com/NahnahAJ/Rails-app-for-API.git
+$ git clone https://github.com/NahnahAJ/Rails-app-for-UI.git
 ```
 
 - Then switch to the project folder by the bellow query:
 
 ```
-$ cd Rails-app-for-API
+$ cd Rails-app-for-UI
 ```
 
 - Install the required dependecies with `bundle install`
