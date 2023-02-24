@@ -1,5 +1,5 @@
-import axios from "axios";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const GETGREETINGDATA = 'greeting/webapp/GETGREETINGDATA';
 const URL = 'http://localhost:3000/api/v1/greetings';
@@ -7,14 +7,11 @@ const URL = 'http://localhost:3000/api/v1/greetings';
 const initialState = {
   greetingData: [],
   isLoading: true,
-}
+};
 
-export const getApiData = createAsyncThunk(GETGREETINGDATA, async () => { 
-  // const responseArray = []
+export const getApiData = createAsyncThunk(GETGREETINGDATA, async () => {
   const response = await axios.get(URL);
   return response.data;
-  // responseArray.push(response.data);
-  // return responseArray
 });
 
 const greetingSlice = createSlice({
@@ -33,6 +30,6 @@ const greetingSlice = createSlice({
       state.isLoading = false;
     },
   },
-})
+});
 
 export default greetingSlice.reducer;
